@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mama Betty Catering — Ghanese catering | BE &amp; NL</title>
+<meta name="description" content="Authentieke Ghanese catering voor bruiloften, feesten en events in België en Nederland. 100% halal. Vraag vrijblijvend een offerte aan.">
+<meta property="og:title" content="Mama Betty Catering">
+<meta property="og:description" content="Authentieke Ghanese catering voor bruiloften, feesten en events in België en Nederland.">
+<meta property="og:image" content="logo.jpg">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Sofia+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --olive-900:#2F3A18;
+    --olive-700:#4D5B2A;
+    --olive-500:#6B7A3E;
+    --olive-100:#ECEEDF;
+    --cream:#FBF8F1;
+    --apron:#F3E6CC;
+    --bronze:#B07D3E;
+    --bronze-dark:#8E6029;
+    --ink:#2A2620;
+    --ink-soft:#615A50;
+    --line:#E7E0D0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Sofia Sans',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:17px;
+  }
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.1}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .script{font-family:'Great Vibes',cursive;font-weight:400}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,248,241,.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1100px;margin:0 auto;padding:10px 22px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    position:relative;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand img{width:52px;height:52px;object-fit:cover;object-position:50% 22%;border-radius:50%;border:2px solid var(--olive-700);background:#fff}
+  .brand-name{font-family:'Great Vibes',cursive;font-size:30px;color:var(--olive-700);line-height:1}
+  .brand-name small{display:block;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-top:2px}
+  nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink-soft)}
+  nav a:hover{color:var(--olive-700)}
+  .btn{
+    display:inline-block;background:var(--olive-700);color:#fff;
+    padding:12px 26px;border-radius:999px;text-decoration:none;
+    font-weight:700;font-size:15px;border:none;cursor:pointer;font-family:inherit;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--olive-900);transform:translateY(-1px)}
+  .btn:focus-visible{outline:3px solid var(--bronze);outline-offset:2px}
+  .btn:disabled{opacity:.6;cursor:wait;transform:none}
+  nav a.btn{color:#fff}
+  .btn-bronze{background:var(--bronze)}
+  .btn-bronze:hover{background:var(--bronze-dark)}
+  .menu-toggle{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--olive-900)}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    max-width:1100px;margin:0 auto;padding:56px 22px 64px;
+    display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--bronze);margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--bronze)}
+  .hero h1{
+    font-size:clamp(40px,5.6vw,64px);font-weight:600;color:var(--olive-900);
+  }
+  .hero h1 .script{display:block;color:var(--olive-700);font-size:1.2em;line-height:1.15;margin-top:4px}
+  .hero p.lead{margin:22px 0 28px;font-size:19px;color:var(--ink-soft);max-width:52ch}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .badge{
+    background:var(--olive-100);color:var(--olive-900);
+    border:1px solid #D7DBC2;border-radius:999px;
+    padding:7px 16px;font-size:14px;font-weight:600;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-size:14px;color:var(--ink-soft)}
+  .hero-logo{
+    width:100%;max-width:460px;margin:0 auto;
+    mix-blend-mode:multiply;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:76px 22px}
+  .wrap{max-width:1100px;margin:0 auto}
+  .section-head{max-width:640px;margin-bottom:44px}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head.center .eyebrow::after{content:"";width:26px;height:1.5px;background:var(--bronze)}
+  .section-head h2{font-size:clamp(32px,4vw,46px);font-weight:600;color:var(--olive-900);margin:10px 0 12px}
+  .section-head p{color:var(--ink-soft);font-size:17px}
+
+  .divider{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--bronze);padding:0 22px}
+  .divider::before,.divider::after{content:"";height:1px;flex:1;max-width:220px;background:var(--line)}
+  .divider span{font-family:'Cormorant Garamond',serif;font-weight:700;letter-spacing:.3em;font-size:13px}
+
+  /* menu */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .dish{
+    background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:26px 24px;transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .dish:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(47,58,24,.10)}
+  .dish-icon{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+    font-size:26px;margin-bottom:16px;background:var(--olive-100);
+  }
+  .dish h3{font-size:25px;font-weight:600;color:var(--olive-900);margin-bottom:6px}
+  .dish p{font-size:15px;color:var(--ink-soft)}
+  .dish .tag{
+    display:inline-block;margin-top:14px;font-size:12px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);
+  }
+
+  /* catering */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .green-section{background:var(--olive-700);color:var(--cream)}
+  .green-section .eyebrow{color:var(--apron)}
+  .green-section .eyebrow::before{background:var(--apron)}
+  .service-list{list-style:none;display:grid;gap:16px}
+  .service-list li{
+    background:rgba(251,248,241,.07);
+    border:1px solid rgba(251,248,241,.18);
+    border-radius:16px;padding:18px 20px;
+  }
+  .service-list h3{font-size:23px;color:var(--apron);margin-bottom:4px;font-weight:600}
+  .service-list p{font-size:15px;color:rgba(251,248,241,.85)}
+  .big-quote{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:clamp(28px,3.4vw,38px);line-height:1.25;color:var(--cream);
+  }
+  .big-quote strong{color:var(--apron);font-weight:700}
+  .quote-sub{margin-top:18px;color:rgba(251,248,241,.8);font-size:16px}
+
+  /* waarom */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .why{text-align:center;padding:10px}
+  .why .num{font-family:'Great Vibes',cursive;font-size:46px;color:var(--bronze);line-height:1}
+  .why h3{font-size:23px;color:var(--olive-900);margin:8px 0 6px;font-weight:600}
+  .why p{font-size:15px;color:var(--ink-soft)}
+
+  /* contact */
+  .contact-card{
+    background:#fff;border:1px solid var(--line);border-radius:26px;
+    padding:40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;
+  }
+  .contact-info h3{font-size:28px;color:var(--olive-900);font-weight:600;margin-bottom:12px}
+  .contact-info p{color:var(--ink-soft);font-size:16px;margin-bottom:22px}
+  .contact-rows{display:grid;gap:12px;font-size:15.5px}
+  .contact-rows div{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .contact-rows strong{min-width:80px;color:var(--olive-700)}
+  .contact-rows a{color:var(--bronze-dark);font-weight:600;word-break:break-all}
+  .form{display:grid;gap:14px}
+  .form label{display:block;margin-bottom:5px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--olive-900)}
+  .form input,.form select,.form textarea{
+    width:100%;padding:12px 14px;border:1.5px solid #DDD4C1;border-radius:12px;
+    font-family:inherit;font-size:15px;background:var(--cream);color:var(--ink);
+  }
+  .form input:focus,.form select:focus,.form textarea:focus{
+    outline:none;border-color:var(--olive-700);box-shadow:0 0 0 3px rgba(77,91,42,.15);
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .hp{position:absolute;left:-9999px}
+  .form-msg{
+    display:none;padding:14px 16px;border-radius:12px;font-weight:600;font-size:15px;
+    background:var(--olive-100);border:1px solid #CBD1AE;color:var(--olive-900);
+  }
+  .form-msg.error{background:#FBEDE8;border-color:#EBC3B5;color:#8A2F14}
+
+  /* footer */
+  footer.site{
+    background:var(--olive-900);color:rgba(251,248,241,.8);
+    padding:40px 22px;font-size:14.5px;
+  }
+  footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer.site .script{font-size:30px;color:var(--apron)}
+  footer.site a{color:var(--apron);text-decoration:none;font-weight:600}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;padding-top:28px;text-align:center}
+    .hero-logo{max-width:320px;order:-1}
+    .hero p.lead{margin-left:auto;margin-right:auto}
+    .hero-badges,.hero-cta{justify-content:center}
+    .eyebrow::before{display:none}
+    .menu-grid{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .split,.contact-card{grid-template-columns:1fr}
+    nav ul{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      background:var(--cream);flex-direction:column;padding:18px 22px;gap:16px;
+      border-bottom:1px solid var(--line);
+    }
+    nav ul.open{display:flex}
+    .menu-toggle{display:block}
+  }
+  @media (max-width:560px){
+    .menu-grid,.why-grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+    .contact-card{padding:24px}
+    section{padding:60px 16px}
+    .brand-name{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="logo.jpg" alt="">
+      <span class="brand-name">Mama Betty
+        <small>Catering</small>
+      </span>
+    </a>
+    <nav>
+      <button class="menu-toggle" aria-label="Menu openen" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+      <ul id="navlinks">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#catering">Catering</a></li>
+        <li><a href="#waarom">Over ons</a></li>
+        <li><a href="#offerte" class="btn btn-bronze">Vraag een offerte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Ghanese catering · BE &amp; NL</span>
+      <h1>Smaken die je recht naar het moederland brengen
+        <span class="script">met liefde gekookt</span>
+      </h1>
+      <p class="lead">Van dampende jollof tot krokante kelewele: Mama Betty kookt zoals grootmoeder het deed — met tijd, liefde en échte Ghanese kruiden. Voor bruiloften, feesten en events in België en Nederland.</p>
+      <div class="hero-badges">
+        <span class="badge">🇬🇭 Authentiek Ghanees</span>
+        <span class="badge">☪️ 100% Halal</span>
+        <span class="badge">📍 België &amp; Nederland</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#offerte">Plan jouw event</a>
+        <span class="hero-note">Vrijblijvende offerte binnen 48 uur</span>
+      </div>
+    </div>
+    <img class="hero-logo" src="logo.jpg" alt="Mama Betty Catering logo: Mama Betty met een kookpot">
+  </div>
+
+  <div class="divider" aria-hidden="true"><span>— ✦ —</span></div>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Het menu</span>
+        <h2>Gerechten met een verhaal</h2>
+        <p>Elk gerecht wordt vers bereid volgens familierecepten die van generatie op generatie zijn doorgegeven. Alles is halal en aanpasbaar aan jouw event.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="dish">
+          <div class="dish-icon">🍚</div>
+          <h3>Jollof Rice</h3>
+          <p>Onze beroemde one-pot rijst in rijke tomatensaus met kip, rund of vegetarisch. De ster van elk Ghanees feest.</p>
+          <span class="tag">Signature dish</span>
+        </article>
+        <article class="dish">
+          <div class="dish-icon">🍌</div>
+          <h3>Kelewele</h3>
+          <p>Goudgebakken bakbanaan met gember, chili en Ghanese kruiden. Zoet, pittig en onweerstaanbaar als hapje.</p>
+          <span class="tag">Perfect voor recepties</span>
+        </article>
+        <article class="dish">
+          <div class="dish-icon">🐟</div>
+          <h3>Banku &amp; Tilapia</h3>
+          <p>Gegrilde tilapia met gefermenteerde maïsdeeg-bollen en verse pepersaus. Traditie op z'n best.</p>
+          <span class="tag">Traditioneel</span>
+        </article>
+        <article class="dish">
+          <div class="dish-icon">🥜</div>
+          <h3>Groundnut Soup</h3>
+          <p>Romige pindasoep met malse kip, geserveerd met fufu. Comfortfood zoals alleen grootmoeder het kan.</p>
+          <span class="tag">Comfort classic</span>
+        </article>
+        <article class="dish">
+          <div class="dish-icon">🍛</div>
+          <h3>Waakye</h3>
+          <p>Rijst en bonen gestoomd in sorghumblad, met shito, gari, spaghetti en ei. Het straatvoedsel van Accra.</p>
+          <span class="tag">Streetfood favoriet</span>
+        </article>
+        <article class="dish">
+          <div class="dish-icon">🍢</div>
+          <h3>Chichinga</h3>
+          <p>Gegrilde spiesjes gemarineerd in suya-kruiden. Rokerig, kruidig en altijd als eerste op.</p>
+          <span class="tag">BBQ &amp; events</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATERING -->
+  <section id="catering" class="green-section">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Catering</span>
+        <h2 class="big-quote">"Van intieme diners tot grote bruiloften — <strong>wij brengen Ghana naar jouw tafel.</strong>"</h2>
+        <p class="quote-sub">Volledige buffetten of grote hoeveelheden om af te halen. Wij verzorgen events in heel België en Nederland.</p>
+      </div>
+      <ul class="service-list">
+        <li>
+          <h3>💍 Bruiloften</h3>
+          <p>Complete buffetten afgestemd op jouw wensen en aantal gasten — traditioneel Ghanees of fusion.</p>
+        </li>
+        <li>
+          <h3>🎉 Feesten &amp; events</h3>
+          <p>Verjaardagen, naming ceremonies, bedrijfsfeesten en festivals. Van fingerfood tot volledig menu.</p>
+        </li>
+        <li>
+          <h3>🥡 Bulk &amp; afhaal</h3>
+          <p>Grote hoeveelheden vers bereid, klaar om te serveren.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WAAROM -->
+  <section id="waarom">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Over Mama Betty</span>
+        <h2>Koken zoals grootmoeder het deed</h2>
+        <p>Bij Mama Betty draait alles om smaak, gastvrijheid en de warmte van een Ghanese familietafel.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why">
+          <div class="num">1</div>
+          <h3>Familierecepten</h3>
+          <p>Echte Ghanese recepten, doorgegeven van generatie op generatie.</p>
+        </div>
+        <div class="why">
+          <div class="num">2</div>
+          <h3>Vers bereid</h3>
+          <p>Alles wordt vers gekookt voor jouw event — niets uit een pakje.</p>
+        </div>
+        <div class="why">
+          <div class="num">3</div>
+          <h3>100% halal</h3>
+          <p>Iedereen kan met een gerust hart aanschuiven.</p>
+        </div>
+        <div class="why">
+          <div class="num">4</div>
+          <h3>Op maat</h3>
+          <p>Menu en hoeveelheden afgestemd op jouw wensen en budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>— ✦ —</span></div>
+
+  <!-- CONTACT / OFFERTE -->
+  <section id="offerte">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Offerte</span>
+        <h2>Plan jouw event met Mama Betty</h2>
+        <p>Vertel ons over je event en ontvang binnen 48 uur een vrijblijvende offerte op maat.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-info">
+          <h3>Rechtstreeks contact</h3>
+          <p>Liever meteen mailen? Mama Betty helpt je graag persoonlijk verder — in het Nederlands, Engels of Twi.</p>
+          <div class="contact-rows">
+            <div><strong>E-mail</strong><a href="mailto:Mamabettycatering@gmail.com">Mamabettycatering@gmail.com</a></div>
+            <div><strong>Regio</strong><span>België &amp; Nederland</span></div>
+            <div><strong>Keuken</strong><span>100% halal</span></div>
+          </div>
+        </div>
+        <form class="form" id="quoteForm" novalidate>
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-row">
+            <div>
+              <label for="name">Naam</label>
+              <input id="name" name="Naam" type="text" required autocomplete="name">
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="phone">Telefoon</label>
+              <input id="phone" name="Telefoon" type="tel" autocomplete="tel" placeholder="optioneel">
+            </div>
+            <div>
+              <label for="date">Datum event</label>
+              <input id="date" name="Datum event" type="date">
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="type">Type event</label>
+              <select id="type" name="Type event">
+                <option>Bruiloft</option>
+                <option>Feest / ceremonie</option>
+                <option>Bedrijfsevent</option>
+                <option>Bulk / afhaal</option>
+                <option>Anders</option>
+              </select>
+            </div>
+            <div>
+              <label for="guests">Aantal gasten</label>
+              <input id="guests" name="Aantal gasten" type="number" min="1" placeholder="bv. 120">
+            </div>
+          </div>
+          <div>
+            <label for="msg">Jouw wensen</label>
+            <textarea id="msg" name="Wensen" rows="4" placeholder="Locatie, favoriete gerechten, allergieën..."></textarea>
+          </div>
+          <button class="btn btn-bronze" type="submit" id="submitBtn">Verstuur aanvraag</button>
+          <div class="form-msg" id="formMsg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div><span class="script">Mama Betty</span><br>© <span id="year"></span> Mama Betty Catering · Ghanese catering in België &amp; Nederland</div>
+    <div><a href="mailto:Mamabettycatering@gmail.com">Mamabettycatering@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var form = document.getElementById('quoteForm');
+  var msg = document.getElementById('formMsg');
+  var btn = document.getElementById('submitBtn');
+
+  function show(text, isError){
+    msg.textContent = text;
+    msg.className = 'form-msg' + (isError ? ' error' : '');
+    msg.style.display = 'block';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.Naam.value.trim() || !form.email.checkValidity() || !form.email.value){
+      show('Vul je naam en een geldig e-mailadres in.', true);
+      return;
+    }
+    var data = Object.fromEntries(new FormData(form).entries());
+    data._subject = 'Nieuwe offerte-aanvraag: ' + data['Type event'] + ' (' + data.Naam + ')';
+    data._template = 'table';
+    data._captcha = 'false';
+
+    btn.disabled = true;
+    btn.textContent = 'Bezig met versturen...';
+    fetch('https://formsubmit.co/ajax/Mamabettycatering@gmail.com', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(data)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if (res.success === 'true' || res.success === true){
+        show('Bedankt! Je aanvraag is verstuurd. We nemen binnen 48 uur contact met je op. 🇬🇭', false);
+        form.reset();
+      } else {
+        throw new Error(res.message || 'fout');
+      }
+    })
+    .catch(function(){
+      show('Versturen lukte niet. Mail ons gerust rechtstreeks: Mamabettycatering@gmail.com', true);
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.textContent = 'Verstuur aanvraag';
+    });
+  });
+
+  // sluit mobiel menu na klik
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('navlinks').classList.remove('open'); });
+  });
+</script>
+</body>
+</html>
