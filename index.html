@@ -122,9 +122,9 @@
     padding:26px 24px;transition:transform .18s ease, box-shadow .18s ease;
   }
   .dish:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(47,58,24,.10)}
-  .dish-icon{
-    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
-    font-size:26px;margin-bottom:16px;background:var(--olive-100);
+  .dish-photo{
+    display:block;width:calc(100% + 48px);max-width:none;margin:-26px -24px 20px;
+    aspect-ratio:4/3;object-fit:cover;border-radius:19px 19px 0 0;background:var(--olive-100);
   }
   .dish h3{font-size:25px;font-weight:600;color:var(--olive-900);margin-bottom:6px}
   .dish p{font-size:15px;color:var(--ink-soft)}
@@ -260,8 +260,8 @@
       </h1>
       <p class="lead">Van dampende jollof tot krokante kelewele: Mama Betty kookt zoals grootmoeder het deed — met tijd, liefde en échte Ghanese kruiden. Voor bruiloften, feesten en events in België en Nederland.</p>
       <div class="hero-badges">
-        <span class="badge">🇬🇭 Authentiek Ghanees</span>
-        <span class="badge">📍 België &amp; Nederland</span>
+        <span class="badge">Authentiek Ghanees</span>
+        <span class="badge">België &amp; Nederland</span>
       </div>
       <div class="hero-cta">
         <a class="btn" href="#offerte">Plan jouw event</a>
@@ -283,37 +283,31 @@
       </div>
       <div class="menu-grid">
         <article class="dish">
-          <div class="dish-icon">🍚</div>
           <h3>Jollof Rice</h3>
           <p>Onze beroemde one-pot rijst in rijke tomatensaus met kip, rund of vegetarisch. De ster van elk Ghanees feest.</p>
           <span class="tag">Signature dish</span>
         </article>
         <article class="dish">
-          <div class="dish-icon">🍌</div>
           <h3>Kelewele</h3>
           <p>Goudgebakken bakbanaan met gember, chili en Ghanese kruiden. Zoet, pittig en onweerstaanbaar als hapje.</p>
           <span class="tag">Perfect voor recepties</span>
         </article>
         <article class="dish">
-          <div class="dish-icon">🐟</div>
           <h3>Banku &amp; Tilapia</h3>
           <p>Gegrilde tilapia met gefermenteerde maïsdeeg-bollen en verse pepersaus. Traditie op z'n best.</p>
           <span class="tag">Traditioneel</span>
         </article>
         <article class="dish">
-          <div class="dish-icon">🥜</div>
           <h3>Groundnut Soup</h3>
           <p>Romige pindasoep met malse kip, geserveerd met fufu. Comfortfood zoals alleen grootmoeder het kan.</p>
           <span class="tag">Comfort classic</span>
         </article>
         <article class="dish">
-          <div class="dish-icon">🍛</div>
           <h3>Waakye</h3>
           <p>Rijst en bonen gestoomd in sorghumblad, met shito, gari, spaghetti en ei. Het straatvoedsel van Accra.</p>
           <span class="tag">Streetfood favoriet</span>
         </article>
         <article class="dish">
-          <div class="dish-icon">🍢</div>
           <h3>Chichinga</h3>
           <p>Gegrilde spiesjes gemarineerd in suya-kruiden. Rokerig, kruidig en altijd als eerste op.</p>
           <span class="tag">BBQ &amp; events</span>
@@ -332,15 +326,15 @@
       </div>
       <ul class="service-list">
         <li>
-          <h3>💍 Bruiloften</h3>
+          <h3>Bruiloften</h3>
           <p>Complete buffetten afgestemd op jouw wensen en aantal gasten — traditioneel Ghanees of fusion.</p>
         </li>
         <li>
-          <h3>🎉 Feesten &amp; events</h3>
+          <h3>Feesten &amp; events</h3>
           <p>Verjaardagen, naming ceremonies, bedrijfsfeesten en festivals. Van fingerfood tot volledig menu.</p>
         </li>
         <li>
-          <h3>🥡 Bulk &amp; afhaal</h3>
+          <h3>Bulk &amp; afhaal</h3>
           <p>Grote hoeveelheden vers bereid, klaar om te serveren.</p>
         </li>
       </ul>
@@ -486,7 +480,7 @@
     .then(function(r){ return r.json(); })
     .then(function(res){
       if (res.success === 'true' || res.success === true){
-        show('Bedankt! Je aanvraag is verstuurd. We nemen binnen 48 uur contact met je op. 🇬🇭', false);
+        show('Bedankt! Je aanvraag is verstuurd. We nemen binnen 48 uur contact met je op.', false);
         form.reset();
       } else {
         throw new Error(res.message || 'fout');
